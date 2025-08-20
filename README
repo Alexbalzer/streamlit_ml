@@ -8,7 +8,7 @@ Python 3 oder höhere Version installieren
 
 Repository klonen:
 
-git clone git@github.com:Olexandr-Andriyenko/abschlussprojekt.git <project_name>
+git clone git@github.com:dein_Name/abschlussprojekt.git <project_name>
 
 Gehe dann in das Projektverzeichnis:
 
@@ -49,3 +49,25 @@ source .venv/bin/activate
 Abhängigkeiten installieren:
 
 pip install -r requirements.txt
+
+# ML Playground (Streamlit)
+
+Interaktive App für **Classification** & **Clustering**  
+– mit eingebauten Datensätzen, CSV-Upload, PCA-Projektion (2D/3D) und Plotly-Visualisierung.
+
+## Projektstruktur
+ml_playground/
+  ├── app.py              # Streamlit-UI
+  └── core/
+      ├── __init__.py     # öffentliche API
+      ├── datasets.py     # Daten laden & CSV
+      ├── models.py       # Modelle & Parameter
+      └── pipeline.py     # Training, Evaluation, PCA
+
+## Lokales Setup
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run ml_playground/app.py
