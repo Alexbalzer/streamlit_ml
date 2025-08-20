@@ -1,3 +1,26 @@
+# ML Playground (Streamlit)
+
+Interaktive App für **Classification** & **Clustering**  
+– mit eingebauten Datensätzen, CSV-Upload, PCA-Projektion (2D/3D) und Plotly-Visualisierung.
+
+## Projektstruktur
+ml_playground/
+  ├── app.py              # Streamlit-UI
+  └── core/
+      ├── __init__.py     # öffentliche API
+      ├── datasets.py     # Daten laden & CSV
+      ├── models.py       # Modelle & Parameter
+      └── pipeline.py     # Training, Evaluation, PCA
+
+## Lokales Setup
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run ml_playground/app.py
+
+
 
 Dieses Repository enthält verschiedene Materialien und Ressourcen rund um das Abschlussprojekt. Hier findest du Code-Beispiele, Erklärungen und Dokumentationen zum Abschlussprojekt
 
@@ -12,7 +35,7 @@ git clone git@github.com:dein_Name/abschlussprojekt.git <project_name>
 
 Gehe dann in das Projektverzeichnis:
 
-cd <project_name>
+cd streamlit_ml
 
 Virtuele Entwicklungsumgebung erstellen:
 
@@ -50,24 +73,16 @@ Abhängigkeiten installieren:
 
 pip install -r requirements.txt
 
-# ML Playground (Streamlit)
+🐳 Alternativ: Start mit Docker
 
-Interaktive App für **Classification** & **Clustering**  
-– mit eingebauten Datensätzen, CSV-Upload, PCA-Projektion (2D/3D) und Plotly-Visualisierung.
+Falls du kein Python lokal installieren möchtest, kannst du die App direkt mit Docker starten:
 
-## Projektstruktur
-ml_playground/
-  ├── app.py              # Streamlit-UI
-  └── core/
-      ├── __init__.py     # öffentliche API
-      ├── datasets.py     # Daten laden & CSV
-      ├── models.py       # Modelle & Parameter
-      └── pipeline.py     # Training, Evaluation, PCA
+1. Image von Docker Hub laden
 
-## Lokales Setup
-```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run ml_playground/app.py
+docker pull alexanderlip/streamlit-ml:latest
+
+2. Container starten
+
+docker run -p 8501:8501 alexanderlip/streamlit-ml:latest
+
+➡️ Danach im Browser öffnen: http://localhost:8501
