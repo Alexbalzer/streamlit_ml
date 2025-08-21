@@ -37,11 +37,11 @@ Gehe dann in das Projektverzeichnis:
 
 cd streamlit_ml
 
-Virtuele Entwicklungsumgebung erstellen:
+Virtuelle Entwicklungsumgebung erstellen:
 
 python -m venv .venv
 
-Virtuele Entwicklungsumgebung aktivieren:
+Virtuelle Entwicklungsumgebung aktivieren:
 
 .venv\Scripts\activate
 
@@ -61,11 +61,11 @@ Gehe dann in das Projektverzeichnis:
 
 cd <project_name>
 
-Virtuele Entwicklungsumgebung erstellen:
+Virtuelle Entwicklungsumgebung erstellen:
 
 python3 -m venv .venv
 
-Virtuele Entwicklungsumgebung aktivieren:
+Virtuelle Entwicklungsumgebung aktivieren:
 
 source .venv/bin/activate
 
